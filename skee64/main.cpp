@@ -346,7 +346,7 @@ class StopWatch
 public:
 	StopWatch()
 	{
-		
+
 	}
 
 	void Start()
@@ -434,7 +434,7 @@ void SKEE64Serialization_Load(SKSESerializationInterface * intfc)
 		}
 	}
 	_DMESSAGE("%s - Loaded %dms", __FUNCTION__, sw.Stop());
-	
+
 	g_firstLoad = true;
 }
 
@@ -737,7 +737,7 @@ bool SKSEPlugin_Load(const SKSEInterface * skse)
 {
 	if (!SKSEPlugin_Query(skse))
 		return false;
-	
+
 	_DMESSAGE("NetImmerse Override Enabled");
 
 	SKEE64GetConfigValue("Features", "bEnableOverlays", &g_enableOverlays);
@@ -951,6 +951,7 @@ bool SKSEPlugin_Load(const SKSEInterface * skse)
 	g_interfaceMap.AddInterface("Attachment", &g_attachmentInterface);
 	g_interfaceMap.AddInterface("Command", &g_commandInterface);
 	g_interfaceMap.AddInterface("FormTag", &g_formTagInterface);
+	g_interfaceMap.AddInterface("Preset", &g_presetInterface);
 
 	if (g_enableTangentSpaceCorrection)
 	{
